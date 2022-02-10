@@ -1,0 +1,85 @@
+@use 'vars' as v;
+
+.MyOrder {
+	
+	width: 360px;
+	padding: 24px;
+	box-sizing: border-box;
+	position: absolute ;
+	right: -360px;
+	background-color: white;
+	top:60px;
+	border-radius: 6px ;
+	border: 1px solid v.$very-light-pink;
+	height: calc(100vh - 200px);
+	transition: 1s ease;
+	animation: swipeLeft 1s ease forwards;
+	overflow-y: scroll
+	
+}
+
+@keyframes swipeLeft {
+	100%{transform: translateX(-360px)}
+}
+
+.backImage{
+	width:20px;
+	cursor:pointer;
+	margin:0 0px 0 20px;
+}
+
+
+.title-container {
+	display: flex;
+}
+.title-container img {
+	transform: rotate(180deg);
+	margin-right: 14px;
+	cursor: pointer;
+}
+.title {
+	font-size: var(--lg);
+	font-weight: bold;
+}
+.order {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 16px;
+	align-items: center;
+	background-color: v.$text-input-field;
+	margin-bottom: 24px;
+	border-radius: 8px;
+	padding: 0 24px;
+}
+.order p:nth-child(1) {
+	display: flex;
+	flex-direction: column;
+}
+.order p span:nth-child(1) {
+	font-size: v.$md;
+	font-weight: bold;
+}
+.order p:nth-child(2) {
+	text-align: end;
+	font-weight: bold;
+}
+
+.primary-button {
+	display: flex;
+	background-color: v.$hospital-green;
+	border-radius: 8px;
+	border: none;
+	color: v.$white;
+	width: 100%;
+	cursor: pointer;
+	font-size: v.$md;
+	font-weight: bold;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+}
+@media (max-width: 640px) {
+	.MyOrder {
+		width: 100%;
+	}
+}

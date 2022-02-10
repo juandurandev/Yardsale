@@ -1,0 +1,128 @@
+@use 'vars' as v;
+
+.ProductInfo {
+	width:420px;
+	position:absolute;
+	height:auto;
+	box-sizing: border-box;
+	top:60px;
+	right:-360px;
+	background-color: white;
+	border-radius: 0px 0 10px 10px;
+	z-index:1;
+	transition: 1s ease;
+	animation: swipeLeft 1s ease forwards;
+	box-shadow: -2px 10px 10px 0px rgba(0,0,0,.3);
+}
+
+@keyframes swipeLeft {
+	100%{transform: translateX(-360px)}
+}
+
+
+@media screen and(max-width:600px){
+	.ProductInfo{
+		width:100%;
+		
+	}
+}
+
+.image {
+	padding: 10px;
+
+	
+}
+
+
+.price {
+	color: v.$very-light-pink;
+	font-size: v.$md;
+	margin-top: 0;
+	margin-bottom: 36px;
+	margin: 10px;
+	
+}
+.titleProductInfo {
+	color: v.$very-light-pink;
+	font-size: v.$sm;
+	margin-top: 0;
+	margin-bottom: 36px;
+	margin: 10px;
+}
+
+@media screen and(max-width:600px){
+	.title{
+		margin-bottom: 0;
+		
+		
+	}
+}
+
+
+.descripcion {
+	font-weight: bold;
+	font-size: var(--md);
+	margin-top: 0;
+	margin-bottom: 4px;
+	margin:10px;
+	
+}
+
+.BackArrow{
+	width:20px;
+	cursor:pointer;
+	margin:0 0px 0 20px;
+}
+
+@media all and(max-width:600px){
+	.BackArrow{
+		width:10px;
+		cursor:pointer;
+	
+	}
+
+}
+
+
+
+.primary-buttonProducInfo {
+	background-color: v.$hospital-green;
+	border-radius: 8px;
+	border: none;
+	color: v.$white;
+	width: 95%;
+	font-size: v.$md;
+	font-weight: bold;
+	height: 50px;
+	cursor: pointer;
+	margin:10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+@media all and(max-width:600px){
+	.primary-buttonProducInfo{
+		height:40px;
+	}
+
+}
+
+
+.add-to-cart-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	
+}
+
+.productInfoImage{
+	width:100%;
+	object-fit: cover;
+	border-radius: 10px 10px 10px 10px;
+}
+
+
+
